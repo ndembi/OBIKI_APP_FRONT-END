@@ -1,0 +1,57 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)">
+    <mat-toolbar color="primary">Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="#">
+        <mat-icon>home</mat-icon>ACCUEIL</a>
+        <mat-divider></mat-divider>
+      <a mat-list-item href="#">
+        <mat-icon>card_giftcard</mat-icon>PHARMACIENS</a>
+        <mat-list>
+          <mat-list-item>Créer</mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>Supprimer</mat-list-item>
+          <mat-divider></mat-divider>
+        </mat-list>
+      <a mat-list-item href="#">
+        <mat-icon>trending_up</mat-icon>PHARMACIES</a>
+        <mat-list>
+          <mat-list-item>Ajouter</mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>Supprimer</mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>Listes</mat-list-item>
+        </mat-list>
+      <a mat-list-item href="#">
+        <mat-icon>commute</mat-icon>UTILISATEURS</a>
+        <mat-list>
+          <mat-list-item>Users Listes</mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>Contact</mat-list-item>
+          <mat-divider></mat-divider>
+        </mat-list>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>Interface d'Administration</span>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <app-dashboard-app></app-dashboard-app>
+  </mat-sidenav-content>
+</mat-sidenav-container>
