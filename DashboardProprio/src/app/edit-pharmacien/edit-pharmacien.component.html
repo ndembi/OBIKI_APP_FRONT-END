@@ -1,0 +1,22 @@
+<h1 mat-dialog-title>{{data}}</h1>
+<div mat-dialog-content>
+  <form class="example-form" >
+    <mat-form-field>
+      <input matInput placeholder="Post Title" type="text"  name="name">
+    </mat-form-field>
+    <mat-form-field>
+      <textarea matInput placeholder="Post Body"  name="body"></textarea>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select matInput placeholder="Post Category"  name="category">
+        <mat-option  >
+          {{ cat.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button mat-raised-button type="submit" color="primary">Save</button>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button class="close"  color="warn">Cancel</button>
+</div>
