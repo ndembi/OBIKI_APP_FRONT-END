@@ -24,9 +24,9 @@ export class InterfacePharmacienComponent implements OnInit {
 
   constructor(public http: HttpClient) { }
   products = [];
-  
+
   fetchData = function(){
-  this.http.get("http://127.0.0.1:8008/pharmacien/").subscribe(
+    this.http.get("http://localhost:8004/pharmacien/").subscribe(
     (res: Response) => {
       console.log(res);
       this.products = res;
@@ -35,6 +35,6 @@ export class InterfacePharmacienComponent implements OnInit {
 }
   ngOnInit() {
     this.fetchData();
-  }  
+  }
 
 }

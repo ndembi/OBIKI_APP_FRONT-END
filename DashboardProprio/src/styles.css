@@ -2,3 +2,8 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 html, body { height: 100%; }
 body { margin: 0; font-family: 'Roboto', sans-serif; }
+
+.mat-toolbar.mat-primary {
+    background: #56b53f;
+    color: #fff;
+}

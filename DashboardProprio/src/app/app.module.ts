@@ -13,6 +13,7 @@ import { NavigationAppComponent } from './navigation-app/navigation-app.componen
 import { InterfacePharmacienComponent } from './interface-pharmacien/interface-pharmacien.component';
 import { AddPharmacienComponent } from './add-pharmacien/add-pharmacien.component';
 import { EditPharmacienComponent } from './edit-pharmacien/edit-pharmacien.component';
+import { ListePharmacienComponent } from './liste-pharmacien/liste-pharmacien.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { EditPharmacienComponent } from './edit-pharmacien/edit-pharmacien.compo
     NavigationAppComponent,
     InterfacePharmacienComponent,
     AddPharmacienComponent,
-    EditPharmacienComponent
+    EditPharmacienComponent,
+    ListePharmacienComponent
   ],
   imports: [
     BrowserModule,

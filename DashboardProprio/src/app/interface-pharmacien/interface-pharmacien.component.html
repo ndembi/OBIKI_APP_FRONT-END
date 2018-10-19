@@ -2,18 +2,9 @@
   <mat-tab-group>
     <mat-tab label="LISTES DES PHARMACIES">
       <h1>Listes des Pharmaciens</h1>
-      <mat-grid-list cols="3" rowHeight="3:1">
-        <mat-grid-tile *ngFor="let product of products">
-            <h3>Pharmacie:{{product.name}}</h3>
-            siren:{{product.siren}}
-            Adresse:{{product.address}}
-            {{product.phone}}          
-      
-        </mat-grid-tile>
-      
-      </mat-grid-list>
+      <app-liste-pharmacien></app-liste-pharmacien>
     </mat-tab>
-    <mat-tab label="AJOUTER UNE PHARMACIE"> <h1>Ajouter une pharmacie</h1>    
+    <mat-tab label="AJOUTER UNE PHARMACIE"> <h1>Ajouter une pharmacie</h1>
     <app-add-pharmacien></app-add-pharmacien>
   </mat-tab>
     <mat-tab label="METTRE A JOUR UN PHARMACIEN">
@@ -22,7 +13,7 @@
     </mat-tab>
     <mat-tab label="RECHERCHER UN PHARMACIEN"> <mat-paginator [length]="length" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" (page)="pageEvent = $event">
     </mat-paginator>
-    
+
     <div *ngIf="pageEvent">
       <h5>Page Change Event Properties</h5>
       <div>List length: {{pageEvent.length}}</div>
@@ -30,7 +21,7 @@
       <div>Page index: {{pageEvent.pageIndex}}</div>
     </div></mat-tab>
   </mat-tab-group>
-  
+
   <!-- <router-outlet></router-outlet> -->
 
 
