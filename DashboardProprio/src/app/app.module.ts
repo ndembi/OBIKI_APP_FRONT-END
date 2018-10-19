@@ -14,6 +14,7 @@ import { InterfacePharmacienComponent } from './interface-pharmacien/interface-p
 import { AddPharmacienComponent } from './add-pharmacien/add-pharmacien.component';
 import { EditPharmacienComponent } from './edit-pharmacien/edit-pharmacien.component';
 import { ListePharmacienComponent } from './liste-pharmacien/liste-pharmacien.component';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -27,15 +28,17 @@ import { ListePharmacienComponent } from './liste-pharmacien/liste-pharmacien.co
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     AllModulesModule,
     LayoutModule,
     HttpClientModule,
     RouterModule.forRoot([
-      { path: "", component: InterfacePharmacienComponent}
+      { path: "", component: InterfacePharmacienComponent }
     ])
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
